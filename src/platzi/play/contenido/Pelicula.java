@@ -1,4 +1,4 @@
-package src.platzi.play.contenido;
+package platzi.play.contenido;
 
 public class Pelicula {
     public String titulo;

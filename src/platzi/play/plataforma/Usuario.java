@@ -1,4 +1,4 @@
-package src.platzi.play.plataforma;
+package platzi.play.plataforma;
 
 import platzi.play.contenido.Pelicula;
 
