@@ -15,6 +15,15 @@ public class Main {
         pelicula.fechaEstreno = LocalDate.of(2018, 10, 15);
         pelicula.genero = "Fantasia";
         pelicula.calificar(4.7);
+        pelicula.duracion = 120;
+
+        long duracionLong = pelicula.duracion;
+        int calificacionInt = (int) pelicula.calificacion;
+        long numerDePremios = Long.parseLong("25");
+
+        System.out.println("Duracion long " + duracionLong);
+        System.out.println("Calificacion Int " + calificacionInt);
+        System.out.println("Numero de premios " + numerDePremios);
 
         Usuario usuario = new Usuario();
         usuario.nombre = "Juan";
