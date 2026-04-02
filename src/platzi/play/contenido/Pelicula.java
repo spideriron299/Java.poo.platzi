@@ -1,11 +1,13 @@
 package platzi.play.contenido;
 
+import java.time.LocalDate;
+
 public class Pelicula {
     public String titulo;
     public String descripcion;
     public int duracion;
     public String genero;
-    public int anioEstreno;
+    public LocalDate fechaEstreno;
     public double calificacion;
     public boolean disponible;
 
@@ -14,7 +16,7 @@ public class Pelicula {
     }
 
     public String obtenerFichaTecnica() {
-        return titulo + " (" + anioEstreno + ")\n" + "Genero: "+ genero + "\nCalificacion: " + calificacion + "/5\n";
+        return titulo + " (" + fechaEstreno.getYear() + ")\n" + "Genero: "+ genero + "\nCalificacion: " + calificacion + "/5\n";
     }
 
     public void calificar( double calificacion){
