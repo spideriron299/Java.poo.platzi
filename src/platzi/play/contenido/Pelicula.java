@@ -20,7 +20,7 @@ public class Pelicula {
 
     }
 
-    public Pelicula(int duracion, String titulo, String genero, double calificacion) {
+    public Pelicula( String titulo,int duracion, String genero, double calificacion) {
         this(titulo, duracion, genero);
         this.calificar(calificacion);
     }

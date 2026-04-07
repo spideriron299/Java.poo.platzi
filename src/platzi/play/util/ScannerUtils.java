@@ -13,6 +13,11 @@ public class ScannerUtils {
     public static int capturarNumero(String mensaje){
         System.out.println(mensaje + ": ");
 
+        while (!scanner.hasNextInt()) {
+            System.out.println("Dato no acptado. " + mensaje + ": ");
+            scanner.next();
+        }
+
         int dato = scanner.nextInt();
         return dato;
     }
@@ -20,7 +25,15 @@ public class ScannerUtils {
     public static double capturarDecimal(String mensaje){
         System.out.println(mensaje + ": ");
 
+        while (!scanner.hasNextDouble()) {
+            System.out.println("Dato no acptado. " + mensaje + ": ");
+            scanner.next();
+        }
+
         double dato = scanner.nextDouble();
+        scanner.nextLine();
         return dato;
     }
+
+
 }
