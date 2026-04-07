@@ -2,6 +2,7 @@ package src.platzi.play;
 
 import platzi.play.contenido.Pelicula;
 import platzi.play.plataforma.Usuario;
+import platzi.play.util.ScannerUtils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -10,20 +11,19 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Platzi Play");
 
+        String nombre = ScannerUtils.capturarTexto("Nombre del contenido");
+        String genero = ScannerUtils.capturarTexto("Genero del contenido");
+        int duracion = ScannerUtils.capturarNumero("Duracoin del contenido");
+        double calificacion = ScannerUtils.capturarDecimal("Calififcaion del contenido");
+
         Pelicula pelicula = new Pelicula();
-        pelicula.titulo = "El señor de los anillos";
+        pelicula.titulo = nombre;
         pelicula.fechaEstreno = LocalDate.of(2018, 10, 15);
-        pelicula.genero = "Fantasia";
-        pelicula.calificar(4.7);
-        pelicula.duracion = 120;
+        pelicula.genero = genero;
+        pelicula.calificar(calificacion);
+        pelicula.duracion = duracion;
 
-        long duracionLong = pelicula.duracion;
-        int calificacionInt = (int) pelicula.calificacion;
-        long numerDePremios = Long.parseLong("25");
-
-        System.out.println("Duracion long " + duracionLong);
-        System.out.println("Calificacion Int " + calificacionInt);
-        System.out.println("Numero de premios " + numerDePremios);
+        System.out.println(pelicula.obtenerFichaTecnica());
 
         Usuario usuario = new Usuario();
         usuario.nombre = "Juan";
@@ -33,15 +33,5 @@ public class Main {
 
         usuario.ver(pelicula);
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Cual es tu nombre?");
-//        String nombre = scanner.nextLine();
-//
-//        System.out.println("Hola " + nombre + ", esto es Platzi Play");
-//
-//        System.out.println(nombre + " cuantos años tienes?");
-//        int edad = scanner.nextInt();
-//
-//        System.out.println(nombre + " puede ver contenido + " + edad);
     }
 }
