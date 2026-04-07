@@ -8,8 +8,12 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Main {
+
+    public static final String NOMBRE_PLATAFORMA = "Platzi Play";
+    public static final String VERSION = "1.0.0";
+
     public static void main(String[] args) {
-        System.out.println("Platzi Play");
+        System.out.println( NOMBRE_PLATAFORMA + VERSION);
 
         String nombre = ScannerUtils.capturarTexto("Nombre del contenido");
         String genero = ScannerUtils.capturarTexto("Genero del contenido");
