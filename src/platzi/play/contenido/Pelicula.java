@@ -30,7 +30,9 @@ public class Pelicula {
     }
 
     public String obtenerFichaTecnica() {
-        return titulo + " (" + fechaEstreno.getYear() + ")\n" + "Genero: "+ genero + "\nCalificacion: " + calificacion + "/5\n";
+        return "*" + titulo + " (" + fechaEstreno.getYear() + ") *\n"
+                + "Genero: "+ genero
+                + "\nCalificacion: " + calificacion + "/5\n";
     }
 
     public void calificar( double calificacion){

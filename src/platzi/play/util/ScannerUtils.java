@@ -19,6 +19,7 @@ public class ScannerUtils {
         }
 
         int dato = scanner.nextInt();
+        scanner.nextLine();
         return dato;
     }
 
@@ -34,6 +35,4 @@ public class ScannerUtils {
         scanner.nextLine();
         return dato;
     }
-
-
 }
