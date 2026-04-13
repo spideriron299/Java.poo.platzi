@@ -35,7 +35,7 @@ public class Plataforma {
     }
 
     private void contarVisualizacion(Pelicula contenido){
-        int conteoActual = visualizaciones.getOrDefault(contenido, 0)
+        int conteoActual = visualizaciones.getOrDefault(contenido, 0);
         visualizaciones.put(contenido, conteoActual +1);
     }
 
