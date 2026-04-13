@@ -1,5 +1,7 @@
 package platzi.play.util;
 
+import platzi.play.contenido.Genero;
+
 import java.util.Scanner;
 
 public class ScannerUtils {
@@ -34,5 +36,22 @@ public class ScannerUtils {
         double dato = scanner.nextDouble();
         scanner.nextLine();
         return dato;
+    }
+
+    public static Genero capturarGenero(String mensaje){
+        while (true){
+            System.out.println(mensaje + "... Opciones:");
+            for (Genero genero : Genero.values()){
+                System.out.println("-" + genero.name());
+            }
+            System.out.println("Cual quieres?");
+            String entrada = scanner.nextLine();
+
+            try {
+                return Genero.valueOf(entrada.toUpperCase());
+            } catch (IllegalArgumentException e) {
+                System.out.println("Gnero no aceptado ");
+            }
+        }
     }
 }
