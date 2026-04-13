@@ -17,7 +17,7 @@ public class Usuario {
 
     public void ver(Pelicula pelicula){
         System.out.println(nombre + " esta viendo ..");
-        pelicula.reporducir();
+        pelicula.reproducir();
     }
 
 }

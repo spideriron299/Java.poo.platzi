@@ -25,7 +25,7 @@ public class Pelicula {
         this.calificar(calificacion);
     }
 
-    public void reporducir() {
+    public void reproducir() {
         System.out.println("Reproduciendo " + titulo );
     }
 
