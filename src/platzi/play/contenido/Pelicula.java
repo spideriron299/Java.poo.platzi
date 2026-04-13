@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Pelicula {
     private String titulo;
     private String descripcion;
-    private double duracion;
+    private int duracion;
     private String genero;
     private LocalDate fechaEstreno;
     private double calificacion;
@@ -49,7 +49,7 @@ public class Pelicula {
         return titulo;
     }
 
-    public double getDuracion() {
+    public int getDuracion() {
         return duracion;
     }
 
@@ -77,9 +77,7 @@ public class Pelicula {
         this.descripcion = descripcion;
     }
 
-    public void setDuracion(double duracion) {
-        this.duracion = duracion;
-    }
+    public void setDuracion(int duracion) { this.duracion = duracion; }
 
     public void setFechaEstreno(LocalDate fechaEstreno) {
         this.fechaEstreno = fechaEstreno;
