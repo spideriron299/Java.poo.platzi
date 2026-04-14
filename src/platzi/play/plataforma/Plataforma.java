@@ -89,6 +89,13 @@ public class Plataforma {
                 .toList();
     }
 
+    public List<Promocionable> getContenidoPromocionale(){
+        return contenido.stream()
+                .filter(contenido -> contenido instanceof Promocionable)
+                .map(contenidoProm ->(Promocionable) contenidoProm)
+                .toList();
+    }
+
     public int getDuracionTotal(){
         return contenido.stream()
                 .mapToInt(Contenido::getDuracion)

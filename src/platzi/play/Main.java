@@ -31,6 +31,7 @@ public class Main {
         cargarPeliculas(plataforma);
 
         System.out.println("Mas de " + plataforma.getDuracionTotal() + " minutos de contenido");
+        plataforma.getContenidoPromocionale().forEach(promocionable -> System.out.println(promocionable.promocinar()));
 
         while (true) {
             int opcionElegida = ScannerUtils.capturarNumero("""
