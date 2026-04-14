@@ -19,6 +19,7 @@ public class Main {
     public static final int BUSCAR_POR_GENERO = 4;
     public static final int VER_POPULARES = 5;
     public static final int REPRODUCIR = 6;
+    public static final int BUSCAR_POR_TIPO = 7;
     public static final int ELIMINAR = 8;
     public static final int SALIR = 9;
 
@@ -40,6 +41,7 @@ public class Main {
                     4. Buscar por genero
                     5. Ver populares
                     6. Reproducir
+                    7. Buscar por tipo de contenido
                     8. Eliminar
                     9. Salir
                     """);
@@ -98,6 +100,17 @@ public class Main {
                     }
                     else {
                         System.out.println(nombre + " no existe");
+                    }
+                }
+                case BUSCAR_POR_TIPO -> {
+                    int tipoDeContenido = ScannerUtils.capturarNumero("Que tipo de contenido quieres buscar?\n1. Pelicula\n2. Documental");
+
+                    if (tipoDeContenido == 1){
+                        List<Pelicula> peliculas = plataforma.getPeliculas();
+                        peliculas.forEach(pelicula -> System.out.println(pelicula.obtenerFichaTecnica() + "\n"));
+                    } else {
+                        List<Documental> documentales = plataforma.getDocumentales();
+                        documentales.forEach(documental -> System.out.println(documental.obtenerFichaTecnica() + "\n"));
                     }
                 }
                 case ELIMINAR -> {
